@@ -8,7 +8,7 @@
 :root {
     /* Primary */
     --clr-pale-blue: hsl(225, 100%, 94%);
-    --clr-bright-blue: hsl(245, 75%, 52%);
+    --clr-bright-blue: hsl(245, 75%, 52%); /* for change btn*/
 
     /* Neutral */
     --clr-very-pale-blue: hsl(225, 100%, 94%);
@@ -23,7 +23,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--clr-desaturated-blue);
+    background-color: var(--clr-very-pale-blue);
     background-image: url(/images/pattern-background-desktop.svg);
+    background-size: contain;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
 }
 
 .card {
@@ -53,18 +59,37 @@ body {
 
 .card-content h2 {
     font-weight: 900;
+    color: var(--clr-dark-blue);
+    margin-bottom: 20px;
 }
 
 .card-content p {
     padding: 0 20px;
+    line-height: 1.5;
+    margin: 5px 0 5px 0;
 }
 
 .inner-div {
     background-color: var(--clr-pale-blue);
     display: flex;
+    border-radius: 10px;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 10px 15px;
-    margin: 20px 0 20px 0;
+    text-align: center;
+    padding: 20px 20px;
+    margin: 15px 0 15px 0;
+}
+.inner {
+    flex-direction: column;
+    line-height: .9;
+}
+.inner h4 {
+    color: var(--clr-dark-blue);
+}
+
+.inner-div a {
+    color: var(--clr-bright-blue);
+    font-size: 14px;
 }
 
 button {
@@ -75,6 +100,9 @@ button {
 
 #payment {
     background-color: var(--clr-bright-blue);
+    border: 1px var(--clr-bright-blue) solid;
+    border-radius: 5px;
+    color: var(--clr-very-pale-blue);
     margin-bottom: 15px;
     font-size: 1rem;
     padding: 10px 55px;
@@ -83,10 +111,12 @@ button {
 #cancel-order {
     border: none;
     background: none;
+    color: var(--clr-desaturated-blue);
     font-size: 13px;
 }
 
 .attribution {
+    margin-top: 15px;
     font-size: 11px;
     text-align: center;
 }
