@@ -90,6 +90,11 @@ body {
     color: var(--clr-bright-blue);
     font-size: 14px;
 }
+.inner-div a:hover {
+    color: var(--clr-desaturated-blue);
+    cursor: pointer;
+    text-decoration: none;
+}
 
 button {
     font-size: 1rem;
@@ -107,12 +112,20 @@ button {
     padding: 10px 55px;
     box-shadow: 0px 10px 20px;
 }
+#payment:hover {
+    cursor: pointer;
+    background-color: hsl(228, 45%, 44%);
+}
 
 #cancel-order {
     border: none;
     background: none;
     color: var(--clr-desaturated-blue);
     font-size: 13px;
+}
+#cancel-order:hover {
+    cursor: pointer;
+    color: var(--clr-dark-blue);
 }
 
 .attribution {
